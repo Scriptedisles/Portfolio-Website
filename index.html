@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Breezeified</title>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Breezeified, a Sound Engineer and Lighting Tech!</p>
 
+    <h2>Footloose - April 2025</h2>
+    <div class="carousel">
+        <img src="image1.jpg" alt="Project 1">
+        <img src="image2.jpg" alt="Project 2">
+        <img src="image3.jpg" alt="Project 3">
+    </div>
+    <script>
+        // JavaScript for image carousel
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); // Change image every 3 seconds
+        showImage(currentIndex);
+    </script>
+
+
+</body>
+</html>
