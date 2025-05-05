@@ -15,6 +15,14 @@ body {
     margin-top: 20vh;
 }
 
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 10em;
+}
+
 section {
     display: grid;
     place-content: center;
@@ -22,10 +30,11 @@ section {
     min-height: 75vh;
 }
 
-.arrow {
-    display: flex;
-    justify-content: center;
+.alt {
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    place-content: center;
     align-items: center;
-    margin-top: 20px;
-    font-size: 10em;
+    margin-top: -3vh;
 }
