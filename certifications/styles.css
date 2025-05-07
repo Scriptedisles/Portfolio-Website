@@ -6,35 +6,14 @@ body {
     padding: auto;
     margin: auto;
 }
-.maintitle {
-    font-size: 1.5em;
-    color: #FFFFFF;
+h1 {
     text-align: center;
-    place-content: center;
-    align-items: center;
-    margin-top: 20vh;
+    font-size: 2.5rem;
+    margin: 20px 0;
 }
-
-.arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 10em;
-}
-
 section {
-    display: grid;
+    display: center;
     place-content: center;
     align-items: center;
-    min-height: 75vh;
-}
-
-.alt {
-    font-size: 1em;
-    color: #FFFFFF;
-    text-align: center;
-    place-content: center;
-    align-items: center;
-    margin-top: -3vh;
+    min-height: 0;
 }
