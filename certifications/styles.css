@@ -13,7 +13,7 @@ h1 {
 }
 section {
     display: center;
-    place-content: center;
-    align-items: center;
+    place-content: left;
+    align-items: left;
     min-height: 0;
 }
