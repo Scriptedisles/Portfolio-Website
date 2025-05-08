@@ -6,14 +6,14 @@ body {
     padding: auto;
     margin: auto;
 }
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 20px 0;
+.centerobjects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 section {
-    display: center;
-    place-content: left;
-    align-items: left;
+    display: flex;
+    place-content: center;
+    align-items: center;
     min-height: 0;
 }
