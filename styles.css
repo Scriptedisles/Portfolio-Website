@@ -66,18 +66,15 @@ section {
         rgb(255, 255, 255)
     );
     color: #000;
-    background-size: 0% 0%;
     animation: highlightAnimation 3.5s linear;
 }
 
 @keyframes highlightAnimation {
     0% {
-        background-size: 0% 0%;
-        text-color: #000;
+        background-size: 200% 100%;
     }
     100% {
-        background-size: 100% 100%;
-        text-color: #000000;
+        background-size: 0% 50%;
     }
 }
 
