@@ -30,12 +30,57 @@ section {
     align-items: center;
     min-height: 75vh;
 }
+.gradient {
+    background: linear-gradient(
+        to right,
+        rgb(13, 209, 209),
+        rgb(57, 240, 51)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .alt {
     font-size: 1em;
-    color: #FFFFFF;
     text-align: center;
     place-content: center;
     align-items: center;
     margin-top: -3vh;
+}
+
+.highlight {
+    background: linear-gradient(
+        to right,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255)
+    );
+    color: #000;
+    background-size: 0% 0%;
+    animation: highlightAnimation 3.5s linear;
+}
+
+@keyframes highlightAnimation {
+    0% {
+        background-size: 0% 0%;
+        text-color: #000;
+    }
+    100% {
+        background-size: 100% 100%;
+        text-color: #000000;
+    }
+}
+
+.highlight-animation {
+    animation: highlightAnimation 0.5s forwards;
 }
