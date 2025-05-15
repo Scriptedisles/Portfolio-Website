@@ -1,10 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+
 body {
     background-color: #131313;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     padding: auto;
     margin: auto;
+}
+
+.loader {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #FFF;
+  left: -100px;
+  box-sizing: border-box;
+  animation: shadowRolling 2s linear infinite;
+}
+
+@keyframes shadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+  12% {
+    box-shadow: 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+  25% {
+    box-shadow: 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+  36% {
+    box-shadow: 120px 0 white, 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 130px 0 white, 120px 0 white, 110px 0 white, 100px 0 white;
+  }
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white, 110px 0 white;
+  }
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white;
+  }
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white;
+  }
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
 }
 
 .maintitle {
@@ -37,6 +82,7 @@ section {
         rgb(57, 240, 51)
     );
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     background-size: 200% auto;
     animation: gradientAnimation 3s linear infinite;
@@ -66,18 +112,23 @@ section {
         rgb(255, 255, 255)
     );
     color: #000;
-    animation: highlightAnimation 3.5s linear;
+    animation: highlightAnimation 1.5s linear infinite;
+    animation-direction: alternate;
 }
 
 @keyframes highlightAnimation {
-    0% {
-        background-size: 200% 100%;
-    }
-    100% {
-        background-size: 0% 50%;
-    }
-}
+   
+  0%{
+     -webkit-clip-path: ellipse(20px 20px at -2.54% -9.25%);
+    clip-path: ellipse(20px 20px at -2.54% -9.25%);
+  }
+  50%{
+    -webkit-clip-path: ellipse(20px 20px at 49.66% 64.36%);
+    clip-path: ellipse(20px 20px at 49.66% 64.36%);
 
-.highlight-animation {
-    animation: highlightAnimation 0.5s forwards;
+  }
+  100%{
+     -webkit-clip-path: ellipse(20px 20px at 102.62% -1.61%);
+    clip-path: ellipse(20px 20px at 102.62% -1.61%);
+  }
 }
