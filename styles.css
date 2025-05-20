@@ -10,20 +10,24 @@ body {
 }
 
 
+/* HTML: <div class="loader"></div> */
 .loader {
-  width: 40px;
-  aspect-ratio: 1.154;
-  --_g: no-repeat radial-gradient(farthest-side,#fff 90%,#0000);
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#fff 0 0);
   background: 
-    var(--_g) 50%  0,
-    var(--_g) 0    100%,
-    var(--_g) 100% 100%;
-  background-size: 35% calc(35%*1.154);
-  animation: l16 linear 1s infinite;
+    var(--c) 0%   50%,
+    var(--c) 50%  50%,
+    var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 0.7s infinite linear;
 }
-
-@keyframes l16{ 
-    50%,100% {background-position: 100% 100%,50% 0,0 100%} 
+@keyframes l1 {
+  0%  {background-size: 20% 30%,20% 100%,20% 60%}
+  33% {background-size: 20% 10% ,20% 30%,20% 100%}
+  50% {background-size: 20% 80%,20% 10% ,20% 30%}
+  66% {background-size: 20% 60%,20% 80%,20% 10% }
+  100%{background-size: 20% 100%,20% 60%,20% 80%}
 }
 
 
